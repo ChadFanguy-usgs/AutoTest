@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore Test\Test
+      run: dotnet restore /Test/Test
     - name: Build
-      run: dotnet build Test\Test --no-restore
+      run: dotnet build /Test/Test --no-restore
     - name: Test
-      run: dotnet test CITest\CITest --no-build --verbosity normal
+      run: dotnet test /CITest/CITest --no-build --verbosity normal
